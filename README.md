@@ -80,13 +80,13 @@ sentence.id sentence.language chunk.id chunk.type chunk.pnp chunk.relation word.
 
 ## Installation
 
-First install Python version 2.5+ (not version 3) and the pattern package (https://github.com/clips/pattern). 
+First install Python version 2.5+ (not version 3) and the pattern package (https://github.com/clips/pattern). Mark that the pattern package is released under the BSD license. 
 
 ```
 pip install pattern
 ```
 
-Make sure the location of Python is into the PATH and proceed by installing the R package as follows:
+Make sure the location of Python is into the PATH and proceed by installing the R package pattern.nlp as follows:
 
 ```
 devtools::install_github("bnosac/pattern.nlp", args = "--no-multiarch")
@@ -94,7 +94,7 @@ devtools::install_github("bnosac/pattern.nlp", args = "--no-multiarch")
 
 Make sure your when you run the R version (64/32 bit) it is the same as the Python version you installed (64/32 bit).
 Advise: don't use RStudio, but just plain R when executing the code. 
-
+Mark that the pattern.nlp package is released under the AGPL-3 license.
 
 ## Support in text mining
 
