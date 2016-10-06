@@ -6,7 +6,7 @@ The  **pattern.nlp** package allows to do the following text mining tasks based 
 - POS tagging: Parts of Speech tagging for Dutch, French, English, German
 - Sentiment analysis: Sentiment + subjectivity scoring for Dutch, French, English
 
-![](http://www.clips.ua.ac.be/media/pattern_schema.gif)
+![](inst/img/pattern-nlp-logo.png)
 
 ## Examples
 
@@ -80,7 +80,7 @@ sentence.id sentence.language chunk.id chunk.type chunk.pnp chunk.relation word.
 
 ## Installation
 
-First install Python version 2.5+ (not version 3) and the pattern package (http://www.clips.ua.ac.be/pages/pattern). 
+First install Python version 2.5+ (not version 3) and the pattern package (https://github.com/clips/pattern). 
 
 ```
 pip install pattern
