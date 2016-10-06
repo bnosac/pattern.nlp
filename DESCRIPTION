@@ -1,0 +1,23 @@
+Package: pattern.nlp
+Type: Package
+Title: R package to perform sentiment analysis and Parts of Speech tagging for Dutch/French/English/German
+Description: R package to perform sentiment analysis and Parts of Speech tagging for Dutch/French/English/German.
+Author: Jan Wijffels <jwijffels@bnosac.be>
+Maintainer: Jan Wijffels <jwijffels@bnosac.be>
+License: AGPL-3 + file LICENSE
+Copyright: BNOSAC <info@bnosac.be>
+Version: 1.0
+URL: https://github.com/bnosac/pattern.nlp
+Date: 2016-01-01
+Depends:
+    R (>= 2.15)
+Imports:
+    data.table,
+    findpython,
+    PythonInR,
+    digest,
+    xml2
+Suggests:
+    knitr
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1
