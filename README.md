@@ -78,6 +78,7 @@ sentence.id sentence.language chunk.id chunk.type chunk.pnp chunk.relation word.
          10                fr        7       <NA>      <NA>           <NA>      21        ?         .          ?
 ```
 
+More information about these tags can be found at http://www.clips.ua.ac.be/pages/mbsp-tags
 ## Installation
 
 First install Python version 2.5+ (not version 3) and the pattern package (https://github.com/clips/pattern). Mark that the pattern package is released under the BSD license. 
