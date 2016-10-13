@@ -64,29 +64,30 @@ pattern_pos(x = x, language = 'italian')
 The output of the POS tagging shows at least the following elements:
 ```
 sentence.id sentence.language chunk.id chunk.type chunk.pnp chunk.relation word.id     word word.type word.lemma
-         9                fr        1         NP      <NA>            SBJ       1       Il       PRP         il
-         9                fr        2         VP      <NA>           <NA>       2   pleure        VB    pleurer
-         9                fr        3        PNP       PNP           <NA>       3     dans        IN       dans
-         9                fr        3        PNP       PNP           <NA>       4      mon      PRP$        mon
-         9                fr        3        PNP       PNP           <NA>       5    coeur        NN      coeur
-         9                fr        4        PNP       PNP           <NA>       6    comme        IN      comme
-         9                fr        4        PNP       PNP           <NA>       7       il       PRP         il
-         9                fr        5         VP      <NA>           <NA>       8    pleut        VB   pleuvoir
-         9                fr        6        PNP       PNP           <NA>       9      sur        IN        sur
-         9                fr        6        PNP       PNP           <NA>      10       la        DT         la
-         9                fr        6        PNP       PNP           <NA>      11    ville        NN      ville
-         9                fr        7       <NA>      <NA>           <NA>      12        .         .          .
-        10                fr        1         NP      <NA>            SBJ      13   Quelle       PRP     quelle
-        10                fr        2         VP      <NA>           <NA>      14      est        VB       être
-        10                fr        3         NP      <NA>            OBJ      15    cette       PRP      cette
-        10                fr        3         NP      <NA>            OBJ      16 langueur        NN   langueur
-        10                fr        4       <NA>      <NA>           <NA>      17      qui        WP        qui
-        10                fr        5         VP      <NA>           <NA>      18  penetre        VB    penetre
-        10                fr        6         NP      <NA>            OBJ      19      mon      PRP$        mon
-        10                fr        6         NP      <NA>            OBJ      20    coeur        NN      coeur
-        10                fr        7       <NA>      <NA>           <NA>      21        ?         .          ?
+          9                fr        1         NP      <NA>            SBJ       1       Il       PRP         il
+          9                fr        2         VP      <NA>           <NA>       2   pleure        VB    pleurer
+          9                fr        3        PNP       PNP           <NA>       3     dans        IN       dans
+          9                fr        3        PNP       PNP           <NA>       4      mon      PRP$        mon
+          9                fr        3        PNP       PNP           <NA>       5    coeur        NN      coeur
+          9                fr        4        PNP       PNP           <NA>       6    comme        IN      comme
+          9                fr        4        PNP       PNP           <NA>       7       il       PRP         il
+          9                fr        5         VP      <NA>           <NA>       8    pleut        VB   pleuvoir
+          9                fr        6        PNP       PNP           <NA>       9      sur        IN        sur
+          9                fr        6        PNP       PNP           <NA>      10       la        DT         la
+          9                fr        6        PNP       PNP           <NA>      11    ville        NN      ville
+          9                fr        7       <NA>      <NA>           <NA>      12        .         .          .
+         10                fr        1         NP      <NA>            SBJ      13   Quelle       PRP     quelle
+         10                fr        2         VP      <NA>           <NA>      14      est        VB       être
+         10                fr        3         NP      <NA>            OBJ      15    cette       PRP      cette
+         10                fr        3         NP      <NA>            OBJ      16 langueur        NN   langueur
+         10                fr        4       <NA>      <NA>           <NA>      17      qui        WP        qui
+         10                fr        5         VP      <NA>           <NA>      18  penetre        VB    penetre
+         10                fr        6         NP      <NA>            OBJ      19      mon      PRP$        mon
+         10                fr        6         NP      <NA>            OBJ      20    coeur        NN      coeur
+         10                fr        7       <NA>      <NA>           <NA>      21        ?         .          ?
 ```
 
+More information about these tags can be found at http://www.clips.ua.ac.be/pages/mbsp-tags
 ## Installation
 
 First install Python version 2.5+ (not version 3) and the pattern package (https://github.com/clips/pattern). Mark that the pattern package is released under the BSD license. 
