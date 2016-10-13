@@ -1,7 +1,7 @@
 Package: pattern.nlp
 Type: Package
-Title: R package to perform sentiment analysis and Parts of Speech tagging for Dutch/French/English/German
-Description: R package to perform sentiment analysis and Parts of Speech tagging for Dutch/French/English/German.
+Title: R package to perform sentiment analysis for Dutch/French/English and Parts of Speech tagging for Dutch/French/English/German/Spanish/Italian
+Description: R package to perform sentiment analysis for Dutch/French/English and Parts of Speech tagging for Dutch/French/English/German/Spanish/Italian. Based on the pattern library.
 Author: Jan Wijffels <jwijffels@bnosac.be>
 Maintainer: Jan Wijffels <jwijffels@bnosac.be>
 License: AGPL-3 + file LICENSE

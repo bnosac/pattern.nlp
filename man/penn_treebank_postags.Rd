@@ -10,6 +10,6 @@ More information: \url{https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn
 }
 \examples{
 data(penn_treebank_postags)
-str(penn_treebank_postags)
+penn_treebank_postags
 }
 

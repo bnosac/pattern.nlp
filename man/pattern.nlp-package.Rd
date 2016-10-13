@@ -4,8 +4,11 @@
 \name{pattern.nlp-package}
 \alias{pattern.nlp}
 \alias{pattern.nlp-package}
-\title{R package to perform sentiment analysis and Parts of Speech tagging for Dutch/French/English/German}
+\title{R package to perform sentiment analysis for Dutch/French/English and Parts of Speech tagging for Dutch/French/English/German/Spanish/Italian}
 \description{
-R package to perform sentiment analysis and Parts of Speech tagging for Dutch/French/English/German.
+R package to perform sentiment analysis for Dutch/French/English and Parts of Speech tagging for Dutch/French/English/German/Spanish/Italian.
+}
+\seealso{
+\code{\link{pattern_sentiment}}, \code{\link{pattern_pos}}
 }
 

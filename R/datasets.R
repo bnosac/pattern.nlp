@@ -7,6 +7,6 @@
 #' @docType data
 #' @examples 
 #' data(penn_treebank_postags)
-#' str(penn_treebank_postags)
+#' penn_treebank_postags
 NULL
 

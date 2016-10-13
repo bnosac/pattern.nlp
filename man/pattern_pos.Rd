@@ -9,7 +9,7 @@ pattern_pos(x, language, digest = FALSE, as_html = FALSE)
 \arguments{
 \item{x}{a character string in UTF-8}
 
-\item{language}{a character string with possible values 'dutch', 'french', 'english' or 'german'}
+\item{language}{a character string with possible values 'dutch', 'french', 'english', 'german', 'spanish', 'italian'}
 
 \item{digest}{logical indicating to digest::digest the message}
 
@@ -17,11 +17,12 @@ pattern_pos(x, language, digest = FALSE, as_html = FALSE)
 }
 \value{
 a data.frame with at least the elements sentence.id, sentence.language, chunk.id, chunk.type, chunk.pnp, chunk.relation, 
-word.id, word, word.type, word.lemma or an xml object if as_xml is set to TRUE.
+word.id, word, word.type, word.lemma or an xml object if \code{as_xml} is set to \code{TRUE}.
+Mark that by default all POS tags are mapped on the Penn Treebank tags as available inside this package in \code{\link{penn_treebank_postags}}.
 }
 \description{
 POS tagging using the python pattern package including relations. See http://www.clips.ua.ac.be/pattern.
-Only dutch/french/english/german
+Only dutch/french/english/german/spanish/italian
 }
 \examples{
 x <- "Mevrouw wenst zich aan te sluiten bij onze dienst, kan dat wel zomaar?"
@@ -42,5 +43,17 @@ x <- "Der Turmer, der schaut zu Mitten der Nacht.
  Der Kirchhof, er liegt wie am Tage.
  Da regt sich ein Grab und ein anderes dann."
 pattern_pos(x = x, language = 'german')
+
+x <- "Pasaron cuatro jinetes, sobre jacas andaluzas
+ con trajes de azul y verde, con largas capas oscuras."
+pattern_pos(x = x, language = 'spanish')
+
+x <- "Avevamo vegliato tutta la notte - i miei amici ed io sotto lampade 
+ di moschea dalle cupole di ottone traforato, stellate come le nostre anime, 
+ perche come queste irradiate dal chiuso fulgore di un cuore elettrico.
+ Avevamo lungamente calpestata su opulenti tappeti orientali la nostra atavica accidia, 
+ discutendo davanti ai confini estremi della logica 
+ ed annerendo molta carta di frenetiche scritture."
+pattern_pos(x = x, language = 'italian')
 }
 

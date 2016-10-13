@@ -1,5 +1,5 @@
 # pattern.nlp
-R package to perform sentiment analysis and Parts of Speech tagging for Dutch/French/English/German
+R package to perform sentiment analysis for Dutch/French/English and Parts of Speech tagging for Dutch/French/English/German/Spanish/Italian
 
 The  **pattern.nlp** package allows to do the following text mining tasks based on the pattern library
 
@@ -50,6 +50,15 @@ x <- "Der Turmer, der schaut zu Mitten der Nacht.
  Der Kirchhof, er liegt wie am Tage.
  Da regt sich ein Grab und ein anderes dann."
 pattern_pos(x = x, language = 'german')
+
+x <- "Pasaron cuatro jinetes, sobre jacas andaluzas
+ con trajes de azul y verde, con largas capas oscuras."
+pattern_pos(x = x, language = 'spanish')
+
+x <- "Avevamo vegliato tutta la notte - i miei amici ed io sotto lampade 
+  di moschea dalle cupole di ottone traforato, stellate come le nostre anime, 
+  perché come queste irradiate dal chiuso fulgòre di un cuore elettrico."
+pattern_pos(x = x, language = 'italian')
 ```
 
 The output of the POS tagging shows at least the following elements:
