@@ -34,7 +34,8 @@ polarity subjectivity                                               id
 
 ```
 x <- "Dus godvermehoeren met pus in alle puisten, zei die schele van Van Bukburg en hij had nog gelijk ook.
- Er was toen dat liedje van tietenkonttieten kot tieten kontkontkont, maar dat hoefden we geenseens niet te zingen"
+ Er was toen dat liedje van tietenkonttieten kot tieten kontkontkont, 
+ maar dat hoefden we geenseens niet te zingen"
 pattern_pos(x = x, language = 'dutch')
 
 x <- "Il pleure dans mon coeur comme il pleut sur la ville. Quelle est cette langueur qui penetre mon coeur?"
