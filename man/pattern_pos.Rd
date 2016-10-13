@@ -25,7 +25,9 @@ POS tagging using the python pattern package including relations. See http://www
 Only dutch/french/english/german/spanish/italian
 }
 \examples{
-x <- "Mevrouw wenst zich aan te sluiten bij onze dienst, kan dat wel zomaar?"
+x <- "Dus godvermehoeren met pus in alle puisten, zei die schele van Van Bukburg 
+ en hij had nog gelijk ook. Er was toen dat liedje van tietenkonttieten kont tieten kontkontkont, 
+ maar dat hoefden we geenseens niet te zingen"
 pattern_pos(x = x, language = 'dutch')
 
 x <- "Il pleure dans mon coeur comme il pleut sur la ville.

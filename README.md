@@ -19,24 +19,25 @@ library(pattern.nlp)
 
 ## Sentiment analysis
 x <- pattern_sentiment("i really really hate iphones", language = "english")
-y <- pattern_sentiment("de wereld is een mooie plaats, nietwaar sherlock", language = "dutch")
+y <- pattern_sentiment("We waren bijna bij de kooien toen er van boven 
+  een hoeragejuich losbrak alsof Rudi Vuller door Koeman in z'n kloten was geschopt.", language = "dutch")
 z <- pattern_sentiment("j'aime Paris, c'est super", language = "french")
 rbind(x, y, z)
 
 polarity subjectivity                                               id
    -0.80         0.90                     i really really hate iphones
-    0.70         1.00 de wereld is een mooie plaats, nietwaar sherlock
+    0.70         1.00                 We waren bijna bij de kooien ...
     0.65         0.75                        j'aime Paris, c'est super
 ```
 
 ### Parts of Speech tagging
 
 ```
-x <- "Mevrouw wenst zich aan te sluiten bij onze dienst, kan dat wel zomaar?"
+x <- "Dus godvermehoeren met pus in alle puisten, zei die schele van Van Bukburg en hij had nog gelijk ook.
+ Er was toen dat liedje van tietenkonttieten kot tieten kontkontkont, maar dat hoefden we geenseens niet te zingen"
 pattern_pos(x = x, language = 'dutch')
 
-x <- "Il pleure dans mon coeur comme il pleut sur la ville.
- Quelle est cette langueur qui penetre mon coeur?"
+x <- "Il pleure dans mon coeur comme il pleut sur la ville. Quelle est cette langueur qui penetre mon coeur?"
 pattern_pos(x = x, language = 'french')
 
 x <- "BNOSAC provides consultancy in open source analytical intelligence. 

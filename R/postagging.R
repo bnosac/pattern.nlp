@@ -10,7 +10,9 @@
 #' Mark that by default all POS tags are mapped on the Penn Treebank tags as available inside this package in \code{\link{penn_treebank_postags}}.
 #' @export
 #' @examples 
-#' x <- "Mevrouw wenst zich aan te sluiten bij onze dienst, kan dat wel zomaar?"
+#' x <- "Dus godvermehoeren met pus in alle puisten, zei die schele van Van Bukburg 
+#'  en hij had nog gelijk ook. Er was toen dat liedje van tietenkonttieten kont tieten kontkontkont, 
+#'  maar dat hoefden we geenseens niet te zingen"
 #' pattern_pos(x = x, language = 'dutch')
 #' 
 #' x <- "Il pleure dans mon coeur comme il pleut sur la ville.

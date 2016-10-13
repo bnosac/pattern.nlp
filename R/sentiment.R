@@ -12,7 +12,9 @@
 #' @export
 #' @examples 
 #' pattern_sentiment("i really really hate iphones", language = "english")
-#' pattern_sentiment("de wereld is een mooie plaats, nietwaar sherlock", language = "dutch")
+#' pattern_sentiment("We waren bijna bij de kooien toen er van boven 
+#'  een hoeragejuich losbrak alsof Rudi Vuller door Koeman 
+#'  in z'n kloten was geschopt.", language = "dutch")
 #' pattern_sentiment("j'aime Paris, c'est super", language = "french")
 pattern_sentiment <- function(x, language, id=x, digest=FALSE){
   stopifnot(language %in% c("dutch", "french", "english"))
