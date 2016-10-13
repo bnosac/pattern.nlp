@@ -3,7 +3,7 @@ R package to perform sentiment analysis for Dutch/French/English and Parts of Sp
 
 The  **pattern.nlp** package allows to do the following text mining tasks based on the pattern library
 
-- POS tagging: Parts of Speech tagging for Dutch, French, English, German
+- POS tagging: Parts of Speech tagging for Dutch, French, English, German, Spanish, Italian
 - Sentiment analysis: Sentiment + subjectivity scoring for Dutch, French, English
 
 ![](inst/img/pattern-nlp-logo.png)
