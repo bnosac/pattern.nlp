@@ -17,7 +17,6 @@ The following shows how to use the package
 ```
 library(pattern.nlp)
 
-## Sentiment analysis
 x <- pattern_sentiment("i really really hate iphones", language = "english")
 y <- pattern_sentiment("We waren bijna bij de kooien toen er van boven 
   een hoeragejuich losbrak alsof Rudi Vuller door Koeman in z'n kloten was geschopt.", language = "dutch")
