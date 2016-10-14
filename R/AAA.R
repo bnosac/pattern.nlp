@@ -20,7 +20,7 @@
     PythonInR::pyExec("from pattern.fr import parse as parse_fr")
     PythonInR::pyExec("from pattern.de import parse as parse_de")
     PythonInR::pyExec("from pattern.es import parse as parse_es")
-    PythonInR::pyExec("from pattern.es import parse as parse_it")
+    PythonInR::pyExec("from pattern.it import parse as parse_it")
     
   }
   invisible()
