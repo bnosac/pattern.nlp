@@ -89,6 +89,7 @@ sentence.id sentence.language chunk.id chunk.type chunk.pnp chunk.relation word.
 ```
 
 More information about these tags can be found at http://www.clips.ua.ac.be/pages/mbsp-tags
+
 ## Installation
 
 First install Python version 2.5+ (not version 3) and the pattern package (https://github.com/clips/pattern). Mark that the pattern package is released under the BSD license. 
@@ -106,6 +107,18 @@ devtools::install_github("bnosac/pattern.nlp", args = "--no-multiarch")
 Make sure your when you run the R version (64/32 bit) it is the same as the Python version you installed (64/32 bit).
 Advise: don't use RStudio, but just plain R when executing the code. 
 Mark that the pattern.nlp package is released under the AGPL-3 license.
+
+#### Installation errors
+
+If you get errors like 'No module named pattern.db' when installing the package. Note that pattern.nlp uses the following code to try to find 
+the Python pattern package which should be installed at your computer. As long as this fails, you can not install pattern.nlp and you get the 'No module named pattern.db' error.
+
+```
+library(findpython)
+can_find_python_cmd(required_modules = "pattern.db")
+```
+
+You can look at `findpython::can_find_python_cmd` to see which environment variables you need to set if you put Python/Pattern in a non-standard location to cover when the above error happens.
 
 ## Support in text mining
 
