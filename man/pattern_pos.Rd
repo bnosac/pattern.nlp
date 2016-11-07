@@ -4,7 +4,7 @@
 \alias{pattern_pos}
 \title{POS tagging using the python pattern package including relations.}
 \usage{
-pattern_pos(x, language, digest = FALSE, as_html = FALSE)
+pattern_pos(x, language, digest = FALSE, as_html = FALSE, core = FALSE)
 }
 \arguments{
 \item{x}{a character string in UTF-8}
@@ -14,6 +14,10 @@ pattern_pos(x, language, digest = FALSE, as_html = FALSE)
 \item{digest}{logical indicating to digest::digest the message}
 
 \item{as_html}{logical indicating to return only the xml (for debugging)}
+
+\item{core}{logical indicating to return only the core fields sentence.id, sentence.language, chunk.id, chunk.type, chunk.pnp, chunk.relation, 
+word.id, word, word.type, word.lemma or if deeper level chunks are found, add also these deeper level information are added as columns chunk.level{i}.type/chunk.level{i}.relation/chunkid.level{i} to the data.frame.
+Defaults to FALSE, indicating to also add the deeper levels. If set to \code{TRUE}, rbind-ing will be easier as it makes sure the number of columns is always only the core columns. See the examples.}
 }
 \value{
 a data.frame with at least the elements sentence.id, sentence.language, chunk.id, chunk.type, chunk.pnp, chunk.relation, 
@@ -57,5 +61,9 @@ x <- "Avevamo vegliato tutta la notte - i miei amici ed io sotto lampade
  discutendo davanti ai confini estremi della logica 
  ed annerendo molta carta di frenetiche scritture."
 pattern_pos(x = x, language = 'italian')
+
+pattern_pos(x = x, language = 'italian', core = TRUE)
+pattern_pos(x = x, language = 'italian', core = FALSE)
+pattern_pos(x = x, language = 'italian', as_html = TRUE)
 }
 
