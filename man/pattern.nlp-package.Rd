@@ -2,8 +2,8 @@
 % Please edit documentation in R/pkg.R
 \docType{package}
 \name{pattern.nlp-package}
-\alias{pattern.nlp}
 \alias{pattern.nlp-package}
+\alias{pattern.nlp}
 \title{R package to perform sentiment analysis for Dutch/French/English and Parts of Speech tagging for Dutch/French/English/German/Spanish/Italian}
 \description{
 R package to perform sentiment analysis for Dutch/French/English and Parts of Speech tagging for Dutch/French/English/German/Spanish/Italian.
@@ -11,4 +11,3 @@ R package to perform sentiment analysis for Dutch/French/English and Parts of Sp
 \seealso{
 \code{\link{pattern_sentiment}}, \code{\link{pattern_pos}}
 }
-

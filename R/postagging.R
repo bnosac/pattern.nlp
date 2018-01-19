@@ -8,6 +8,9 @@
 #' @param core logical indicating to return only the core fields sentence.id, sentence.language, chunk.id, chunk.type, chunk.pnp, chunk.relation, 
 #' word.id, word, word.type, word.lemma or if deeper level chunks are found, add also these deeper level information are added as columns chunk.level{i}.type/chunk.level{i}.relation/chunkid.level{i} to the data.frame.
 #' Defaults to FALSE, indicating to also add the deeper levels. If set to \code{TRUE}, rbind-ing will be easier as it makes sure the number of columns is always only the core columns. See the examples.
+#' @param tagset character with the tagset to use. Defaults to 'penn' (the Penn Treebank tagset). Other options are
+#' 'universal' for the universal tagset, 'WOTAN' for Dutch, 'parole' for Spanish, 'STTS' for German. For French/Italian, if you did not fill in 'penn' or 'universal' 
+#' it will use the tagset from the Pattern model building phase.
 #' @return a data.frame with at least the elements sentence.id, sentence.language, chunk.id, chunk.type, chunk.pnp, chunk.relation, 
 #' word.id, word, word.type, word.lemma or an xml object if \code{as_xml} is set to \code{TRUE}.
 #' Mark that by default all POS tags are mapped on the Penn Treebank tags as available inside this package in \code{\link{penn_treebank_postags}}.
@@ -49,7 +52,7 @@
 #' pattern_pos(x = x, language = 'italian', core = TRUE)
 #' pattern_pos(x = x, language = 'italian', core = FALSE)
 #' pattern_pos(x = x, language = 'italian', as_html = TRUE)
-pattern_pos <- function(x, language, digest=FALSE, as_html = FALSE, core = FALSE){
+pattern_pos <- function(x, language, digest=FALSE, as_html = FALSE, core = FALSE, tagset = 'penn'){
   stopifnot(language %in% c("dutch", "french", "english", "german", "spanish", "italian"))
   pyobj <- "messagepos"
   if(digest){
@@ -66,7 +69,7 @@ pattern_pos <- function(x, language, digest=FALSE, as_html = FALSE, core = FALSE
   pySet(key=pyobj, value = x)
   f <- file.path(tempdir(), sprintf("postagged-pid%s.xml", Sys.getpid()))
   pySet(key="outputfile", value = f)
-  pyExec(sprintf("s = Text(%s(%s, tokenize = True, tags = True, chunks = True, lemmata = True, encoding = 'utf-8', relations = True)).xml", FUN, pyobj))
+  pyExec(sprintf("s = Text(%s(%s, tokenize = True, tags = True, chunks = True, lemmata = True, encoding = 'utf-8', relations = True, tagset='%s')).xml", FUN, pyobj, tagset))
   pyExec(sprintf("f = open(outputfile, 'w')"))
   pyExec(sprintf("f.write(s)"))
   pyExec(sprintf("f.close()"))

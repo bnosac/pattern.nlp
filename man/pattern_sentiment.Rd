@@ -30,4 +30,3 @@ pattern_sentiment("We waren bijna bij de kooien toen er van boven
  in z'n kloten was geschopt.", language = "dutch")
 pattern_sentiment("j'aime Paris, c'est super", language = "french")
 }
-
