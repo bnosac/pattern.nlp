@@ -92,7 +92,7 @@ More information about these tags can be found at http://www.clips.ua.ac.be/page
 
 ## Installation
 
-First install Python version 2.5+ (not version 3) and the pattern package (https://github.com/clips/pattern). Mark that the pattern package is released under the BSD license. 
+First install Python version 2.5+ (not version 3) and the pattern package (https://github.com/clips/pattern), e.g. `pip install pattern`. Mark that the pattern package is released under the BSD license. 
 
 ```
 pip install pattern
@@ -101,10 +101,19 @@ pip install pattern
 Make sure the location of Python is into the PATH and proceed by installing the R package pattern.nlp as follows:
 
 ```
-devtools::install_github("bnosac/pattern.nlp", args = "--no-multiarch")
+devtools::install_github("bnosac/pattern.nlp", INSTALL_Opts = "--no-multiarch")
 ```
 
 Make sure your when you run the R version (64/32 bit) it is the same as the Python version you installed (64/32 bit).
+
+If you have more than 1 architecture installed, then you may need to directly call a dependency as follows, prior to loading the package:
+
+```
+PythonInR::pyConnect(pythonExePath="YOUR_PATH")
+```
+
+Otherwise, the logic used to connect R a compatible Python instllation may fail.
+
 Advise: don't use RStudio, but just plain R when executing the code. 
 Mark that the pattern.nlp package is released under the AGPL-3 license.
 
