@@ -62,7 +62,7 @@ pattern_pos <- function(x, language, digest=FALSE, as_html = FALSE, core = FALSE
                 german = "parse_de",
                 spanish = "parse_es",
                 italian = "parse_it")
-  
+  x <- gsub(" ", "missing",x) # Fix empty string bug
   pySet(key=pyobj, value = x)
   f <- file.path(tempdir(), sprintf("postagged-pid%s.xml", Sys.getpid()))
   pySet(key="outputfile", value = f)
