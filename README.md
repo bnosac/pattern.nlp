@@ -101,8 +101,12 @@ pip install pattern
 Make sure the location of Python is into the PATH and proceed by installing the R package pattern.nlp as follows:
 
 ```
-devtools::install_github("bnosac/pattern.nlp", args = "--no-multiarch") ## older version of devtools
-devtools::install_github("bnosac/pattern.nlp", INSTALL_opts = "--no-multiarch") ## newer version of devtools
+# Option 1: using an older version of devtools
+devtools::install_github("bnosac/pattern.nlp", args = "--no-multiarch")
+# Option 2: using an newer version of devtools
+devtools::install_github("bnosac/pattern.nlp", INSTALL_opts = "--no-multiarch")
+# Option 3: clone the repository and install the package from the command line
+R CMD INSTALL pattern.nlp --no-multiarch
 ```
 
 Make sure your when you run the R version (64/32 bit) it is the same as the Python version you installed (64/32 bit).
