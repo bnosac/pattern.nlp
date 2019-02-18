@@ -20,7 +20,9 @@ pattern_pos(x, language, digest = FALSE, as_html = FALSE, core = FALSE,
 word.id, word, word.type, word.lemma or if deeper level chunks are found, add also these deeper level information are added as columns chunk.level{i}.type/chunk.level{i}.relation/chunkid.level{i} to the data.frame.
 Defaults to FALSE, indicating to also add the deeper levels. If set to \code{TRUE}, rbind-ing will be easier as it makes sure the number of columns is always only the core columns. See the examples.}
 
-\item{tagset}{character with the tagset to use. Defaults to 'penn' (the Penn Treebank tagset). Fill in WOTAN for Dutch if you need WOTAN.}
+\item{tagset}{character with the tagset to use. Defaults to 'penn' (the Penn Treebank tagset). Other options are
+'universal' for the universal tagset, 'WOTAN' for Dutch, 'parole' for Spanish, 'STTS' for German. For French/Italian, if you did not fill in 'penn' or 'universal' 
+it will use the tagset from the Pattern model building phase.}
 }
 \value{
 a data.frame with at least the elements sentence.id, sentence.language, chunk.id, chunk.type, chunk.pnp, chunk.relation, 
